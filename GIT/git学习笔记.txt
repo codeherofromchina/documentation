@@ -1,0 +1,35 @@
+#分布式版本控制系统-Git
+安装
+Linux -- 一种是包管理器的方式直接安装（yum方式等） ，另外一种则为从源代码进行安装
+Mac OS X -- 没有用过
+Windows -- 安装 Cygwin来模拟linux使用git，另一种方式是安装msysGit(安装TortoiseGit和资源管理器整合)
+
+
+$git --version 
+查看当前git版本
+
+
+
+$git config --global user.username "wangXiaodan"
+$git config --global user.email "wangxiaodan@sheyuan.com"
+设置当前git用户的用户名和邮箱地址，这些配置将在版本库提交时候用到。
+
+
+#git config --system alias.st status
+设置git命令的别名，方便录入（此命令必须有管理员权限），此条命令后 $git st  相当于命令  $git status
+
+
+$git init 
+如果当前目录不是git目录，此命令初始化当前目录为git仓库，会生成.git目录文件，这样才能进一步操作。
+
+$git config -e 
+$git config -e --global
+$git config -e --system
+查看系统当前的配置，优先级从高到底，目录级别、用户级别、系统级别,也可以这样设置config中的参数内容   git config user.name "内容"
+
+
+$git status 
+查看当前git仓库中的文件修改状态
+
+
+---------------------------------华丽分割线-----------------------------------------------

@@ -102,9 +102,55 @@ $git reflog
 查看操作日志记录
 
 
+
 $git merge <branch> 
 将给定的分支和当前分支内容合并。
 
 
 
 #
+
+
+$git stash 
+保存当前工作区和暂存区的内容，并恢复到当前commit的最新版本。相当于保存工作区文件，然后执行 git reset --hard 命令
+$git stash pop
+还原之前保存的工作区内容，暂存区内容不变。并删除当前保存
+$git stash apply
+回复之前
+
+
+
+$git tag -m "说明" 分支名称
+将当前版本打一个里程碑。
+$git describe
+查看最新提交的一次里程碑
+
+
+添加文件.gitignore 文件可以忽略不需要提交的文件，但是存在的问题是此文件只能影响到未添加到版本库中的文件，已经添加到版本库中的文件则不起作用。
+要将添加到版本库中的文件起到忽略作用，需要将版本库中的文件删除，命令 $git rm --cached fileName 操作，然后提交。
+或者本地执行 git update-index --assume-unchanged fileName 忽略修改。
+
+
+$git blame fileName
+追溯某个文件的提交，查看提交及提交内容
+
+
+
+$git commit --amend
+重新修改最近一次提交的备注语，并将当前暂存区中的文件提交
+
+
+$git cherry-pick commit_version
+将某个提交版本续接到当前HEAD指向的版本上
+
+
+$git rebase --onto <newbase> <since> <till>
+将提交since到till的提交嫁接到newbase提交上，不包含since提交，属于(since,till]
+
+
+$git revert commit_version
+反转提交，相当于对错误提交重新提交一次，只做提交说明，没有具体内容提交
+
+$git gc 
+自动清理版本库操作命令
+

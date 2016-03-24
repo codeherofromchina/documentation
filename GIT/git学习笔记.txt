@@ -1,4 +1,9 @@
 #分布式版本控制系统-Git
+
+
+$gradle product build -x test dev
+导出当前flow_admin项目命令
+
 安装
 Linux -- 一种是包管理器的方式直接安装（yum方式等） ，另外一种则为从源代码进行安装
 Mac OS X -- 没有用过
@@ -154,3 +159,41 @@ $git revert commit_version
 $git gc 
 自动清理版本库操作命令
 
+
+
+
+$git clone <repository> 目录    
+直接拷贝远程库和远程工作区
+$git clone --bare  <repository> 目录   
+$git clone --mirror <repository> 目录   
+只拷贝远程仓库，没有工作区的存在
+
+
+
+$git push <remote_url> :<tagname>
+删除远程版本库中的里程碑
+
+
+
+##分支名称
+$git branch
+查看本地所有分支
+
+$git branch <branchName>
+$git branch <branchName> <start-point>
+创建分支
+
+
+$git branch -d <branchName>
+$git branch -D <branchName>
+删除分支，-d只能删除已经合并到其他分支的分支，-D参数，及时要删除的分支没有合并到其他分支，照样能删除
+
+
+
+$git branch -m <oldbranch> <newbranch>
+$git branch -M <oldbranch> <newbranch>
+重命名分支名称，新分支名称是否已经存在，如果存在，则-M强制执行。
+
+
+$git cherry-pick otherBranchCommit   
+拣选其他分支中的提交到当前分支

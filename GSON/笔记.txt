@@ -1,0 +1,4 @@
+API:http://www.javadoc.io/doc/com.google.code.gson/gson/2.6.2
+ChangeLog:https://github.com/google/gson/blob/master/CHANGELOG.md
+设计文档：https://github.com/google/gson/blob/master/GsonDesignDocument.md
+使用手册：https://github.com/google/gson/blob/master/UserGuide.md

@@ -1,0 +1,42 @@
+application中包含一个defaultListableBeanFactory,好多方法都是委托给此类实现的。
+
+
+
+loadBeanDefinitions(BeanDefinitionReader reader); 执行完后所有定义的beanDefinition数据都已经注册
+
+
+invokeBeanFactoryPostProcessors -- 此方法待细看
+
+registerBeanPostProcessors 
+
+特殊的类：
+ApplicationContextAwareProcessor
+ResourceLoaderAware
+ApplicationEventPublisherAware
+MessageSourceAware
+ApplicationContextAware
+EnvironmentAware
+
+loadTimeWeaver -- LoadTimeWeaverAwareProcessor
+LoadTimeWeaverAware
+
+
+BeanPostProcessorChecker
+
+ApplicationListenerDetector
+
+
+BeanDefinitionRegistryPostProcessor
+
+applicationEventMulticaster   ---- SimpleApplicationEventMulticaster
+
+
+
+ConversionService -- ConversionService
+
+SmartInitializingSingleton
+
+lifecycleProcessor -- LifecycleProcessor
+
+
+ContextRefreshedEvent
